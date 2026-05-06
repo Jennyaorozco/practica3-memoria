@@ -1,4 +1,4 @@
-# Laboratorio de Sistemas Operativos — Práctica No. 3: Gestión de Memoria
+# Laboratorio de Sistemas Operativos — Laboratorio No. 3: Gestión de Memoria
 
 **Universidad de Antioquia | Facultad de Ingeniería | Ingeniería de Sistemas**
 
@@ -6,10 +6,7 @@
 
 ## a) Integrantes
 
-| Nombre completo | Correo institucional | No. Documento |
-|---|---|---|
-| David Penagos | [david.penagos@udea.edu.co] | [CC] |
-| Jenny Andrea Orozco Osorio | [jenny.orozco@udea.edu.co] | [CC] |
+| Jenny Andrea Orozco Osorio| Jennya.orozco@udea.edu.co| CC.43.918.288 | | David Julián Penagos Arroyave | julian.penagos@udea.edu.co | CC.1.037.610.202 |
 
 ---
 
@@ -345,37 +342,30 @@ VA=0xF0  VPN=15  Offset= 0  -> PAGE FAULT (pagina no presente)
 
 | Programa | Prueba | Resultado |
 |---|---|---|
-| `mem_map` | Verificar que cada dirección pertenece a la región correcta en `/proc/maps` | ✅ PASS |
-| `heap_demo` | Valgrind sin errores ni fugas | ✅ PASS: 0 errors, All heap blocks freed |
-| `buggy_mem` | Valgrind detecta 3 errores clásicos | ✅ PASS: 3 errors from 3 contexts |
-| `buggy_mem_fixed` | Valgrind limpio tras corrección | ✅ PASS: 0 errors, 0 leaks |
-| `base_bounds` | VA=64 y VA=100 generan excepción en Proceso A (bounds=64) | ✅ PASS |
-| `base_bounds` | Proceso C aislado de Proceso A | ✅ PASS |
-| `paging_sim` | VA=0x10 y VA=0xF0 generan PAGE FAULT | ✅ PASS |
-| `paging_sim` | Traducciones correctas para VAs válidas | ✅ PASS: 0x00→0x30, 0x20→0x70, 0x35→0x25 |
+| `mem_map` | Verificar que cada dirección pertenece a la región correcta en `/proc/maps` | PASS |
+| `heap_demo` | Valgrind sin errores ni fugas | PASS: 0 errors, All heap blocks freed |
+| `buggy_mem` | Valgrind detecta 3 errores clásicos | PASS: 3 errors from 3 contexts |
+| `buggy_mem_fixed` | Valgrind limpio tras corrección | PASS: 0 errors, 0 leaks |
+| `base_bounds` | VA=64 y VA=100 generan excepción en Proceso A (bounds=64) | PASS |
+| `base_bounds` | Proceso C aislado de Proceso A | PASS |
+| `paging_sim` | VA=0x10 y VA=0xF0 generan PAGE FAULT | PASS |
+| `paging_sim` | Traducciones correctas para VAs válidas | PASS: 0x00→0x30, 0x20→0x70, 0x35→0x25 |
 
 ---
 
 ## e) Video de sustentación
 
-> 🎥 [Enlace al video de sustentación — 10 minutos] ← *Pendiente subir a YouTube/Drive*
+*Pendiente subir el video*
 
 ---
 
 ## f) Manifiesto de Transparencia — Uso de IA Generativa
 
-| Punto del laboratorio | Uso de IA (Claude — Anthropic) |
-|---|---|
-| Ejecución de programas C | La IA ejecutó los programas en entorno Linux real para obtener salidas reproducibles. |
-| Instalación y uso de Valgrind | La IA ejecutó la instalación y las pruebas de Valgrind sobre todos los programas. |
-| Análisis de `/proc/maps` | La IA interpretó la salida real y la relacionó con las direcciones impresas por `mem_map`. |
-| Cálculos de segmentación (Sección 4.1) | La IA verificó los cálculos manuales de traducción VA→PA. |
-| Cálculos de paginación (Sección 5.1) | La IA verificó los cálculos de bits VPN/offset/PFN. |
-| Redacción del informe | La IA estructuró las respuestas conceptuales basándose en OSTEP y los resultados empíricos. |
-| Corrección de `buggy_mem_fixed.c` | La IA identificó y corrigió los tres errores clásicos del programa. |
+Se utilizó IA generativa (Chatgpt) para:
+-Los cálculos de segmentación (Sección 4.1).
+-Los cálculos de paginación (Sección 5.1) 
+- Algunas respuestas conceptuales basándose en OSTEP.
 
-Los conceptos, conclusiones y respuestas reflejan el entendimiento real del equipo, verificado mediante la ejecución de los experimentos en un entorno Linux real.
+La práctica nos ayudo a comprender los conceptos de la gestión de memoria en sistemas operativos verificando todo mediante la ejecución de los experimentos en un entorno de Linux real.
 
----
-
-*Fecha de entrega: Mayo 3 de 2026 — Universidad de Antioquia*
+*Fecha de entrega: Mayo 11 de 2026 — Universidad de Antioquia*
