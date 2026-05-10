@@ -355,7 +355,7 @@ VA=0xF0  VPN=15  Offset= 0  -> PAGE FAULT (pagina no presente)
 
 ## e) Video de sustentación
 
-*Pendiente subir el video*
+https://drive.google.com/file/d/1vNPZX1nDPWk8k6AiH3bP96NgHQ4hezVY/view?usp=sharing
 
 ---
 
