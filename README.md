@@ -369,3 +369,11 @@ Se utilizó IA generativa (Chatgpt) para:
 La práctica nos ayudo a comprender los conceptos de la gestión de memoria en sistemas operativos verificando todo mediante la ejecución de los experimentos en un entorno de Linux real.
 
 *Fecha de entrega: Mayo 11 de 2026 — Universidad de Antioquia*
+
+## g) Conclusiones
+
+En cuanto a al Espacio de Direcciones, cada proceso opera sobre un espacio de direcciones virtuales completamente aislado y las direcciones virtuales no corresponden a posiciones físicas reales en RAM, sino que la MMU las traduce en tiempo de ejecución. Dos procesos pueden tener la misma dirección virtual apuntando a frames físicos distintos, lo que garantiza aislamiento y seguridad entre procesos.
+
+En cuanto a la API de Memoria (malloc/free), cada bloque solicitado debe liberarse exactamente una vez, en el momento correcto. Los errores más comunes — buffer overflow, memory leak y use-after-free — pueden no ser visibles en ejecución normal pero generan consecuencias graves: corrupción silenciosa, inestabilidad o vulnerabilidades de seguridad explotables. Herramientas como Valgrind son indispensables para detectarlos.
+
+Aprendimos que la gestión de memoria en sistemas operativos es una cadena de abstracciones —dirección virtual → segmento/página → frame físico— donde cada capa resuelve limitaciones de la anterior, balanceando protección, eficiencia y complejidad del hardware.
